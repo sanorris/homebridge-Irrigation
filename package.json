@@ -1,0 +1,21 @@
+{
+  "name": "homebridge-Irrigation",
+  "version": "1.0.0",
+  "description": "Irrigation Controller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.2.0"
+  },
+  "author": "Seth Norris",
+  "license": "ISC",
+  "dependencies": {
+    "python-shell": "^6.4.1"
+  }
+}
