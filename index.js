@@ -9,7 +9,7 @@ module.exports = function(homebridge) {
   console.log("homebridge API version: " + homebridge.version);
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
-  homebridge.registerPlatform("homebridge-Irrigation", "Irrigaion", IrrigationPlatform);
+  homebridge.registerPlatform("homebridge-Irrigation", "Irrigation", IrrigationPlatform);
 };
 
 function IrrigationPlatform(log, config){
