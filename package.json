@@ -14,7 +14,7 @@
     "homebridge": ">=0.2.0"
   },
   "author": "Seth Norris",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "python-shell": "^6.4.1"
   }
