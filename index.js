@@ -12,16 +12,18 @@ module.exports = function(homebridge) {
   homebridge.registerPlatform("homebridge-Irrigation", "Irrigation", IrrigationPlatform);
 };
 
-function IrrigationPlatform(log, config){
-	this.config = config;
+function IrrigationPlatform(log, config, api){
 	this.log = log;
 	this.log("Starting Irrigation Platform");
+	this.config = config;
+	this.api = api;
 	this.accessories = [];
 	this.valves = ('valves' in config ? config.valves : []);
 
 	// We know all the valves from the config, so we can create them now
 	for (let i = 0; i < this.valves.length; i++) {
 		this.accessories.push(new ValveAccessory(this.log, this.valves[i]));
+		this.api.registerPlatformAccessories("homebridge-Irrigation", "Irrigation", this.accessories[i]);
 	}
 };
 
